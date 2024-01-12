@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display_accessrecord</title>
+    <style>
+        table,tr,th,td
+        {
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 700px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>display_accessrecord</h1>
+        <table>
+            <td>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Author</th>
+            </td>
+
+            {% for ao in QLAO %}
+            <tr>
+                <td>{{ao.name}}</td>
+                <td>{{ao.date}}</td>
+                <td>{{ao.author}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

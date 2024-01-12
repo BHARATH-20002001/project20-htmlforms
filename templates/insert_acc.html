@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert_acc</title>
+</head>
+<body>
+    <center>
+        <h1>insert_acc</h1>
+        <form method="POST">
+            {% csrf_token %}
+
+            <table>
+                <label for="n">Name</label>
+                <select name="n" id="n">
+                    {% for ao in QLWO %}
+                    <option value="{{ao.name}}">{{ao.name}}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                <br>
+                <label for="d">Date</label>
+                <input type="date" name="d" id="d">
+                <br>
+                <br>
+                <label for="a">Author</label>
+                <input type="text" name="a" id="a">
+                <br>
+                <br>
+            </table>
+
+            <input type="submit" value="insert_accesrecord">
+        </form>
+
+    </center>
+</body>
+</html>
